@@ -1,3 +1,14 @@
+# BLE Toolkit
+
+## `discover.js`
+
+Discover all devices. Use it to identify correct device ID
+
+## `enter-exit.js <peripheral id OR name>` 
+
+Check the distance of peripheral.
+
+
 ## EddyStone Beacon - Raspberry PI
 
 ## iBeacon - Raspberry PI
