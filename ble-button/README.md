@@ -5,12 +5,31 @@
 Change following attributes. 
 
 ```js
-// required one of the following (LOCAL_NAME or PERIPHERAL_ID or PERIPHERAL_ADDRESS)
-const LOCAL_NAME = "O-Click";
-const PERIPHERAL_ID = "f61f624914da4314a3a0b4afb962aea2";
-const PERIPHERAL_ADDRESS = "d0:39:72:d6:0d:47";
+const BlePeripheral = require('./BlePeripheral');
 
-// both required to listen to click event
+const LOCAL_NAME = "O-Click";
+
 const SERVICE_UUID = "ffe0";
 const CHARACTERISTIC_UUID = 'f000ffe104514000b000000000000000';
+
+let ble = new BlePeripheral(LOCAL_NAME);
+
+ble.on('click', () => {
+  console.log('click');
+});
+
+ble.discover()
+  .then(() => {
+    console.log('discovered');
+    return ble.connect();
+  })
+  .then(() => {
+    console.log('connected');
+    return ble.fetchServicesAndCharacteristics();
+  })
+  .then(() => {
+    return ble.subscribeAndListen(SERVICE_UUID, CHARACTERISTIC_UUID)
+  })
+  .catch(e => console.error(e));
+
 ```

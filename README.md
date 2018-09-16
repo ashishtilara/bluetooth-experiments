@@ -4,12 +4,20 @@
 
 Discover all devices. Use it to identify correct device ID
 
-## `enter-exit.js <peripheral id OR name>` 
+## `explorePeripheral.js`
+
+**Usage**: `node ./explorePeripheral.js <peripheral id OR name>`
+
+## `enter-exit.js` 
 
 Check the distance of peripheral.
 
+**Usage**: `node ./enter-exit.js <peripheral id OR name>`
+
 
 ## EddyStone Beacon - Raspberry PI
+
+- TODO
 
 ## iBeacon - Raspberry PI
 

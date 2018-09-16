@@ -10,6 +10,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "chalk": "^2.4.1",
-    "noble": "^1.9.1"
+    "noble": "^1.9.1",
+    "xpc-connection": "sandeepmistry/node-xpc-connection#pull/26/head"
   }
 }
